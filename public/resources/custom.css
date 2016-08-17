@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "STARWARS";
+    src: url("STARWARS.woff") format('woff');
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+.navbar-inverse {
+    background-color: white;
+}
+
+input.ng-invalid {
+    border:1px solid green;
+}
+
+input.ng-valid {
+    border:1px solid green;
+}
+
+.container {
+    padding: 30px;
+}
+
+.data-table-header {
+    cursor: pointer;
+}
+
+.table .star-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding:0px;
+}
+
+.star-icon > span:hover:before  {
+    content: "\2605";
+    position: absolute;
+}
+
+.star-icon > .starred:before  {
+    content: "\2605";
+    position: absolute;
+}
+
+/*
+smart table header sort icon
+*/
+.st-sort-ascent:before{
+    content: '\25B2';
+}
+
+.st-sort-descent:before{
+    content: '\25BC';
+}
+
+.navbar-brand, h3 {
+    font-family: "STARWARS" ;
+}

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default" id="form-panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h3>{{ ctrl.pageType | uppercase }}</h3>
+                        </div>
+                        <div class="col-xs-6 pull-right">
+                            <ul class="pagination pull-right" style="cursor: pointer;">
+                                <li ng-show="ctrl.pageLocation.prev">
+                                    <a ng-click="ctrl.loadData(ctrl.pageType,ctrl.pageLocation.prev )">&lt;</a>
+                                </li>
+                                <li >
+                                    <span>Page {{ ctrl.pageLocation.current }}</span>
+                                </li>
+                                <li ng-show="ctrl.pageLocation.next">
+                                    <a ng-click="ctrl.loadData(ctrl.pageType,ctrl.pageLocation.next )">&gt;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                <tr >
+                                    <th ng-repeat="field in ctrl.fields" class="data-table-header">
+                                        <span>{{ field }}</span>
+                                    </th>
+                                    <th>Favorite</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="row in ctrl.tableData[0]">
+                                    <td ng-repeat="field in ctrl.fields">
+                                        {{row[field]}}
+                                    </td>
+                                    <td class="star-icon"><span ng-click="ctrl.toggleFav(row.url)" ng-class="{'starred':  ctrl.isFav(row.url)} ">☆ </span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

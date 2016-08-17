@@ -1,0 +1,25 @@
+{
+  "name": "AngularStarter",
+  "version": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootswatch-dist": "3.3.4-paper",
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "angular-smart-table": "~2.1.8",
+    "ngstorage": "~0.3.11"
+  },
+  "overrides": {
+    "bootswatch-dist": {
+      "main": [
+        "css/bootstrap.css"
+      ]
+    }
+  }
+}
